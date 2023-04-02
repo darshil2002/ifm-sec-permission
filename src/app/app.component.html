@@ -1,1 +1,7 @@
-<p>dfgdfgfihdrkrghkjdfhssss</p>
+<mat-form-field>
+    <mat-label>Select an option:</mat-label>
+
+    <mat-select [(ngModel)]="selectedOptionData" (ngModelChange)="onItemSelect($event)">
+      <mat-option *ngFor="let option of dropdownList" [value]="option">{{ option.item_text }}</mat-option>
+    </mat-select>
+</mat-form-field>
